@@ -1,0 +1,52 @@
+.navbar {
+  margin: 20px 20px 20px 0 !important;
+  justify-content: flex-start;
+  align-items: center !important;
+}
+
+.menubar-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: -1rem;
+  width: 100px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    159deg,
+    rgba(37, 37, 50, 0.98) 0%,
+    rgba(35, 35, 45, 0.98) 100%
+  );
+}
+
+.navbar-toggler-icon {
+  background-image: url(../../../assets/images/navbar_icon.png);
+  height: 30px;
+  width: 30px;
+}
+
+.navbar-nav .nav-link {
+  color: #8c8c8e;
+}
+
+.offcanvas {
+  background-color: #1f1f29;
+  margin: 20px 20px 20px 0 !important;
+  width: 200px;
+}
+
+#active-tab {
+  transform: rotate(90deg);
+  position: absolute;
+  color: #8c8c8e;
+  overflow: hidden;
+  top: 130px;
+  padding: 20px;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 5px;
+  font-weight: 500;
+  transition: 0.4s ease-in-out;
+}

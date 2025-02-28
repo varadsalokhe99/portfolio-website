@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body .app-container {
+  background-color: #191923 !important;
+  padding: 15px;
+  width: auto;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-color-jaguar {
+  background-color: #20202a;
+}
