@@ -89,9 +89,12 @@
 }
 
 .scroll-frame {
-  padding: 70px 0 50px;
+  position: relative;
+  top: 235px;
+  padding: 10px 0 50px;
   width: 100%;
-  height: calc(100vh - 30px);
+  height: calc(100vh - 285px);
+  overflow-y: auto;
 }
 
 .address {
@@ -128,12 +131,14 @@ h6 {
   width: 100%;
   height: 1px;
   opacity: 0.3;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .lang-skill {
   display: block;
   font-size: 0;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 15px;
 }
 
@@ -147,36 +152,121 @@ h6 {
 }
 
 .circle-progress {
-    position: relative;
-    width: 65%;
+  position: relative;
+  width: 65%;
 }
 
 .progress-ring {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0 auto 15px;
-    background: conic-gradient(#ffc107 calc(var(--progress) * 3.6deg), #20202a  0deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  background: conic-gradient(
+    #ffc107 calc(var(--progress) * 3.6deg),
+    #191924 0deg
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  animation: fillProgress 1.5s ease-out forwards;
 }
 
 .progress-ring::before {
-    content: "";
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    background: #20202a; 
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: #20202a;
+  border-radius: 50%;
 }
 
-.progress-text{
-    position: relative;
-    color: rgb(85, 85, 85);
-    font-size: 13px;
+.progress-text {
+  position: relative;
+  color: #cacace !important;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.hard-skill {
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+.skill-container {
+  width: 100%;
+  position: relative;
+}
+
+.skill-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items properly */
+  margin-bottom: 10px;
+}
+
+.progress {
+  height: 5px;
+  background-color: #191924;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #ffc107;
+  transition: width 1.5s ease-in-out;
+}
+
+.knowledge-list {
+  padding-left: 0;
+}
+
+.knowledge-list li {
+  color: #8c8c8e;
+  text-align: left;
+}
+
+.knowledge-list li i {
+  color: #ffc107;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.profile-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 50px;
+  padding: 15px 0;
+  background: linear-gradient(
+    159deg,
+    rgba(37, 37, 50, 0.98) 0%,
+    rgba(35, 35, 45, 0.98) 100%
+  );
+  text-align: center;
+  box-shadow: 0 -10px 15px 0 rgba(15, 15, 20, 0.1);
+}
+
+.profile-footer a {
+  color: #8c8c8e;
+  font-size: 13px;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: 0.2sease-in-out;
+}
+
+.profile-footer a i {
+  font-weight: 400;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
 }

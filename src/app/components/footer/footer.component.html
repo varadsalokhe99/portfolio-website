@@ -21,52 +21,112 @@
             <br />
             Freelancer
           </div>
-          <div class="scroll-frame">
-            <div class="address">
-              <ul class="p-0 m-0">
-                <li>
-                  <h6>Residence:</h6>
-                  <span>India</span>
-                </li>
-                <li>
-                  <h6>City:</h6>
-                  <span>Kolhapur</span>
-                </li>
-                <li>
-                  <h6>Age</h6>
-                  <span>25</span>
-                </li>
-              </ul>
-            </div>
-            <div class="profile-ls-divider"></div>
-            <div class="lang-skill">
-                <div class="lang-skill-item">
-                    <div class="circle-progress">
-                        <div class="progress-ring" style="--progress: 80;">
-                            <div class="progress-text">85%</div>
-                          </div>
-                          <h6>English</h6>
-                    </div>
-                </div>
-                <div class="lang-skill-item">
-                    <div class="circle-progress">
-                        <div class="progress-ring" style="--progress: 90;">
-                            <div class="progress-text">90%</div>
-                          </div>
-                          <h6>Hindi</h6>
-                    </div>
-                </div>
-                <div class="lang-skill-item">
-                    <div class="circle-progress">
-                        <div class="progress-ring" style="--progress: 100;">
-                            <div class="progress-text">100%</div>
-                          </div>
-                          <h6>Marathi</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-ls-divider"></div>
+        </div>
+        <div class="profile-footer">
+          <a href="https://www.linkedin.com/in/varad-salokhe/" target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/varadsalokhe99" target="_blank">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://gitlab.com/varadsalokhe99" target="_blank">
+            <i class="bi bi-gitlab"></i>
+          </a>
+          <a href="https://www.instagram.com/varad__salokhe" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.threads.net/@varad__salokhe" target="_blank">
+            <i class="bi bi-threads"></i>
+          </a>
+        </div>
+      </section>
+
+      <section #scrolling_section>
+        <div class="scroll-frame">
+          <div class="address">
+            <ul class="p-0 m-0">
+              <li>
+                <h6>Residence:</h6>
+                <span>India</span>
+              </li>
+              <li>
+                <h6>City:</h6>
+                <span>Kolhapur</span>
+              </li>
+              <li>
+                <h6>Age</h6>
+                <span>25</span>
+              </li>
+            </ul>
           </div>
+          <div class="profile-ls-divider"></div>
+          <div class="lang-skill">
+            <div class="lang-skill-item">
+              <div class="circle-progress">
+                <div class="progress-ring" style="--progress: 80">
+                  <div class="progress-text">85%</div>
+                </div>
+                <h6>English</h6>
+              </div>
+            </div>
+            <div class="lang-skill-item">
+              <div class="circle-progress">
+                <div class="progress-ring" style="--progress: 90">
+                  <div class="progress-text">90%</div>
+                </div>
+                <h6>Hindi</h6>
+              </div>
+            </div>
+            <div class="lang-skill-item">
+              <div class="circle-progress">
+                <div class="progress-ring" style="--progress: 100">
+                  <div class="progress-text">100%</div>
+                </div>
+                <h6>Marathi</h6>
+              </div>
+            </div>
+          </div>
+          <div class="profile-ls-divider"></div>
+          <div class="hard-skill">
+            <div class="skill-container">
+              <div class="mb-3" *ngFor="let skill of skills">
+                <div class="skill-heading">
+                  <h6>{{ skill.name }}</h6>
+                  <h6>{{ skill.value }}%</h6>
+                </div>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    #progressBar
+                    [attr.data-progress]="skill"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-ls-divider"></div>
+          <ul class="knowledge-list pt-15 pb-0">
+            <li>
+              <i class="bi bi-check-lg"></i>
+              Bootstrap, PrimeNg
+            </li>
+            <li>
+              <i class="bi bi-check-lg"></i>
+              Frontend Development
+            </li>
+            <li>
+              <i class="bi bi-check-lg"></i>
+              Backend Development
+            </li>
+            <li>
+              <i class="bi bi-check-lg"></i>
+              Database Management
+            </li>
+            <li>
+              <i class="bi bi-check-lg"></i>
+              GIT Knowledge
+            </li>
+          </ul>
         </div>
       </section>
     </div>

@@ -11,6 +11,10 @@ body .app-container {
   justify-content: center;
 }
 
+*{
+  scrollbar-width: none;
+}
+
 .bg-color-jaguar {
   background-color: #20202a;
 }
