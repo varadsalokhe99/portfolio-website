@@ -1,20 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 html,
-body .app-container {
+body {
+  color: #8c8c8e;
   background-color: #191923 !important;
-  padding: 15px;
-  width: auto;
-  height: auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: "Poppins", sans-serif;
 }
 
-*{
+.app-container {
+  max-width: 1440px;
+  width: auto;
+  height: auto;
+  font-size: 13px;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
+
+* {
   scrollbar-width: none;
 }
 
 .bg-color-jaguar {
   background-color: #20202a;
+}
+
+.container {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
 }

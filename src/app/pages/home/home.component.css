@@ -1,0 +1,54 @@
+.app-wrapper {
+  height: auto;
+  overflow: visible;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  background: #1e1e28;
+  background-size: cover;
+  width: auto;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+}
+
+.home-container {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* .home-container:before {
+  content: '';
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  z-index: 9999;
+  background: #191923;
+} */
+
+.app-footer {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  bottom: 20px;
+}
+
+.app-header {
+  position: fixed;
+}
+
+.home-content {
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+  left: 310px;
+  right: 120px;
+  overflow-y: auto;
+  align-items: center;
+  transition: 0.55s ease-in-out;
+  background: #1f1f29;
+}
