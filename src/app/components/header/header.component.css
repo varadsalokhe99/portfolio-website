@@ -6,6 +6,12 @@
   align-items: center !important;
 }
 
+.navbar {
+  position: fixed;
+  z-index: 1050;
+}
+
+
 .menubar-header {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -36,6 +42,7 @@
   background-color: #1f1f29;
   margin: 20px 20px 20px 0 !important;
   width: 200px;
+  z-index: 1100 !important; /* Ensure it's the highest */
 }
 
 #active-tab {

@@ -4,10 +4,12 @@ body {
   color: #8c8c8e;
   background-color: #191923 !important;
   font-family: "Poppins", sans-serif;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
 }
 
 .app-container {
-  max-width: 1440px;
+  max-width: 1440px !important; 
   width: auto;
   height: auto;
   font-size: 13px;
@@ -30,6 +32,6 @@ body {
   padding-bottom: 20px;
 }
 
-a {
+.a {
   text-decoration: none;
 }
