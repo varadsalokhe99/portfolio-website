@@ -1,1 +1,9 @@
-
+.app-container {
+    max-width: 1440px !important; 
+    width: auto;
+    height: auto;
+    font-size: 13px;
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+  }

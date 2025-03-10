@@ -1,1 +1,22 @@
-<p>projects works!</p>
+<div class="container text-center my-5">
+    <h2 class="heading mb-4">My Projects</h2>
+  
+    <div class="projects-container">
+      <div class="project-card card " *ngFor="let project of projects">
+        <img [src]="project.thumbnail" class="card-img-top" alt="{{ project.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ project.title }}</h5>
+          <h6 class="card-subtitle mb-2">{{ project.subtitle }}</h6>
+          <p class="card-text">{{ project.description }}</p>
+          <p class="stack-text"><strong>Tech Stack:</strong> 
+            <span *ngFor="let tech of project.techStack"> {{ tech }} </span>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a [href]="project.liveDemo" target="_blank" class="btn btn-primary me-2">Live Demo</a>
+          <a [href]="project.gitRepo" target="_blank" class="btn btn-outline-light">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

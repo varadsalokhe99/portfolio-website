@@ -127,15 +127,18 @@ h6 {
 }
 
 .lang-skill {
-  display: block;
+  display: flex;
   font-size: 0;
   padding-top: 20px;
   padding-bottom: 15px;
+  align-items: center;
 }
 
 .lang-skill-item {
   width: 33%;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   vertical-align: top;
   font-size: 13px;
   text-align: center;
@@ -190,6 +193,7 @@ h6 {
 .skill-container {
   width: 100%;
   position: relative;
+  padding: 3%;
 }
 
 .skill-heading {
