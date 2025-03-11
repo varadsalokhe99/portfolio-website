@@ -23,6 +23,8 @@ body {
   padding-bottom: 20px;
 }
 
-.a {
+body a {
   text-decoration: none;
+  transition: 0.2s ease-in-out;
+  color: #8c8c8e !important;
 }

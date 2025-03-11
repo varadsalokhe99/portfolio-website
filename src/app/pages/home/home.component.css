@@ -27,9 +27,8 @@
   top: 20px;
   bottom: 20px;
   right: 20px;
-  z-index: 1050; 
+  z-index: 1050;
 }
-
 
 .home-content {
   position: fixed;
@@ -40,8 +39,41 @@
   overflow-y: auto;
   align-items: center;
   transition: 0.55s ease-in-out;
-  background: #1E1E28;
-  z-index: 900; 
+  background: #1e1e28;
+  z-index: 900;
 }
 
+.contaier-fluid {
+  overflow: hidden;
+  padding: 30px !important;
+  width: 100%;
+}
 
+.position {
+  padding: 20px 30px;
+}
+
+.footer {
+  color: #8c8c8e;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+  font-size: 12px;
+  transition: 0.55s ease-in-out;
+  width: 100%;
+  padding: 17px 30px 7px;
+}
+
+.footer div {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.footer a {
+  transition: 0.2s ease-in-out;
+  color: #8c8c8e;
+}
