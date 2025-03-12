@@ -67,8 +67,8 @@
     </div>
     <div class="outer-form">
       <div class="form-wrap">
-        <div class="responsive-screen">
-          <form action="">
+        <div class="w-100">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="info-form">
               <div class="form-field">
                 <span class="position-relative d-flex">
@@ -78,7 +78,7 @@
                   <input
                     class="field"
                     type="text"
-                    name="name"
+                    formControlName="name"
                     id=""
                     placeholder="Name"
                   />
@@ -91,8 +91,8 @@
                   </div>
                   <input
                     class="field"
-                    type="text"
-                    name="email"
+                    type="email"
+                    formControlName="email"
                     id=""
                     placeholder="Email"
                   />
@@ -100,7 +100,7 @@
               </div>
               <div class="form-field">
                 <span class="position-relative d-flex">
-                  <div class="icon align-content-start">
+                  <div class="icon" style="align-items: flex-start">
                     <i class="bi bi-chat-left-text-fill"></i>
                   </div>
                   <textarea
@@ -108,14 +108,15 @@
                     maxlength="2000"
                     cols="40"
                     rows="1"
-                    name="message"
+                    formControlName="message"
                     placeholder="Message"
                     id=""
-                    style="height: 150px"
+                    style="height: 150px; padding-top: 15px"
                   ></textarea>
                 </span>
               </div>
             </div>
+            <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">send message</button>
           </form>
         </div>
       </div>
