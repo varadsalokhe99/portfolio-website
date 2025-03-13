@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { FormService } from 'src/app/form.service';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -8,34 +7,45 @@ import { FormService } from 'src/app/form.service';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
-  contactForm: FormGroup;
+  contactData = {
+    name: '',
+    email: '',
+    message: '',
+  };
+  successMessage = '';
+  errorMessage = '';
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private formService: FormService
-  ) {
-    this.contactForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required],
-    });
+  constructor() {}
+
+  submitForm() {
+    const serviceID = 'portfolio_contact';
+    const templateID = 'portfolio_contact_form';
+    const userID = '0VQ4PT-Uy4w-JjHVO';
+  
+    emailjs
+      .send(serviceID, templateID, this.contactData, userID)
+      .then(() => {
+        this.successMessage = 'Message sent successfully!';
+        this.contactData = { name: '', email: '', message: '' }; 
+        
+        // Auto-hide notification after 5 seconds
+        setTimeout(() => {
+          this.closeNotification();
+        }, 5000);
+      })
+      .catch((error) => {
+        this.errorMessage = 'Failed to send message!';
+        console.error(error);
+        
+        // Auto-hide notification after 5 seconds
+        setTimeout(() => {
+          this.closeNotification();
+        }, 5000);
+      });
   }
 
-  onSubmit(): void {
-    if (this.contactForm.valid) {
-      this.formService.sendFormData(this.contactForm.value).subscribe(
-        (response) => {
-          console.log('Email sent successfully:', response);
-          alert('Your message has been sent successfully.');
-          this.contactForm.reset(); // Clear form after submission
-        },
-        (error) => {
-          console.error('Error sending email:', error);
-          alert('Failed to send message. Please try again later.');
-        }
-      );
-    } else {
-      alert('Please fill in all required fields correctly.');
-    }
+  closeNotification() {
+    this.successMessage = '';
+    this.errorMessage = '';
   }
 }

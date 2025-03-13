@@ -68,7 +68,7 @@
     <div class="outer-form">
       <div class="form-wrap">
         <div class="w-100">
-          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <form (ngSubmit)="submitForm()">
             <div class="info-form">
               <div class="form-field">
                 <span class="position-relative d-flex">
@@ -78,12 +78,14 @@
                   <input
                     class="field"
                     type="text"
-                    formControlName="name"
-                    id=""
+                    [(ngModel)]="contactData.name"
+                    name="name"
                     placeholder="Name"
+                    required
                   />
                 </span>
               </div>
+
               <div class="form-field">
                 <span class="position-relative d-flex">
                   <div class="icon">
@@ -92,12 +94,14 @@
                   <input
                     class="field"
                     type="email"
-                    formControlName="email"
-                    id=""
+                    [(ngModel)]="contactData.email"
+                    name="email"
                     placeholder="Email"
+                    required
                   />
                 </span>
               </div>
+
               <div class="form-field">
                 <span class="position-relative d-flex">
                   <div class="icon" style="align-items: flex-start">
@@ -107,17 +111,42 @@
                     class="field"
                     maxlength="2000"
                     cols="40"
-                    rows="1"
-                    formControlName="message"
+                    rows="3"
+                    [(ngModel)]="contactData.message"
+                    name="message"
                     placeholder="Message"
-                    id=""
-                    style="height: 150px; padding-top: 15px"
+                    required
                   ></textarea>
                 </span>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">send message</button>
+            <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
+          <div
+            class="notification-window"
+            [ngClass]="{ show: successMessage || errorMessage }"
+          >
+            <div
+              class="notification-content"
+              [ngClass]="{ success: successMessage, error: errorMessage }"
+            >
+              <div class="notification-icon">
+                <i
+                  class="bi"
+                  [ngClass]="{
+                    'bi-check-circle-fill': successMessage,
+                    'bi-x-circle-fill': errorMessage
+                  }"
+                ></i>
+              </div>
+              <div class="notification-message">
+                {{ successMessage || errorMessage }}
+              </div>
+              <div class="notification-close" (click)="closeNotification()">
+                <i class="bi bi-x"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -45,7 +45,7 @@
   z-index: 1100 !important; /* Ensure it's the highest */
 }
 
-#active-tab {
+/* #active-tab {
   transform: rotate(90deg);
   position: absolute;
   color: #8c8c8e;
@@ -59,3 +59,28 @@
   font-weight: 500;
   transition: 0.4s ease-in-out;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    top: 20px;
+    right: 20px;
+    left: auto;
+    bottom: auto;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .menubar-header {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+  }
+  
+  .offcanvas {
+    margin: 20px 0 0 0 !important;
+  }
+  
+  #active-tab {
+    display: none; /* Hide the active tab text on mobile 
+  }
+} */
