@@ -1,0 +1,91 @@
+.intro-section {
+  position: relative;
+}
+
+.intro-container {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+.intro-column {
+  display: flex;
+  min-height: 1px;
+  position: relative;
+}
+
+.intro-wrap {
+  align-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+
+.intro-element {
+  width: 100%;
+}
+
+.container {
+  padding: 0 30px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  padding-top: 30px;
+  padding-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro-banner {
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  z-index: 99;
+  margin-bottom: 30px;
+}
+
+.intro-content {
+  position: relative;
+  display: flex;
+  padding: 60px;
+  width: 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(45, 45, 58, 0.9) 15%,
+    rgba(45, 45, 58, 0.7) 50%,
+    rgba(43, 43, 53, 0.7) 100%
+  );
+}
+
+.intro-title {
+  width: 100%;
+  align-self: center;
+}
+
+.intro-title h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.intro-code {
+  font-family: "Courier Prime", monospace;
+  color: #fafafc;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.intro-code i {
+  color: #ffc107;
+}
+
+.intro-code span {
+  animation: blink 0.8s infinite;
+  transition: opacity 0.5s ease-in-out;
+}
