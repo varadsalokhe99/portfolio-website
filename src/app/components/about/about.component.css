@@ -112,7 +112,7 @@
 }
 
 .header-left {
-  width: 55%;
+  width: 50%;
 }
 
 .header-left h5 {
@@ -145,6 +145,7 @@
   border-radius: 15px;
   box-shadow: inset 0 3px 8px 0 rgba(15, 15, 20, 0.2);
   font-size: 12px;
+  display: inline-block;
 }
 
 .content-desc {
@@ -158,7 +159,7 @@
 }
 
 .certificate a {
-  color: #ffc107;
+  color: #ffc107 !important;
   text-decoration: none;
 }
 
