@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 html,
 body {
-  color: #8c8c8e;
+  color: #8c8c8e !important;
   background-color: #191923 !important;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Space Grotesk", sans-serif !important;
   overflow-x: visible !important;
   overflow-y: visible !important;
 }
