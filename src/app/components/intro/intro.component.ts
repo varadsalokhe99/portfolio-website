@@ -5,10 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.css'],
 })
-
 export class IntroComponent implements OnInit {
-  textArray: string[] = ["web applications.", "mobile apps.", "desktop applications."];
-  currentText: string = "";
+  textArray: string[] = [
+    'web applications.',
+    'mobile apps.',
+    'desktop applications.',
+    'customized business websites.',
+  ];
+  currentText: string = '';
   textIndex: number = 0;
   letterIndex: number = 0;
   isDeleting: boolean = false;
