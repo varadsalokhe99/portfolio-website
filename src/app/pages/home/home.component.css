@@ -1,39 +1,55 @@
 .app-wrapper {
-  overflow: visible;
-  margin-left: auto;
-  margin-right: auto;
-  background: #1e1e28;
-  background-size: cover;
-  width: auto;
-  height: 100%;
-  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  max-width: 1440px; 
+  margin: 20px auto; 
+  height: calc(100vh - 40px); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* background: #1e1e28; */
+  /* box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2); */
+  overflow: hidden;
 }
 
 .home-container {
-  position: relative;
+  flex: 1; 
+  margin: 0 20px; 
+  overflow-y: auto; 
+  background: #1e1e28;
+  z-index: 900;
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .app-footer {
-  position: fixed;
+  position: absolute;
   left: 20px;
-  top: 20px;
-  bottom: 20px;
+  /* top: 20px;
+  bottom: 20px; */
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app-header {
-  position: fixed;
-  top: 20px;
-  bottom: 20px;
+  position: absolute;
   right: 20px;
+  top: 0px;
+  bottom: 0px;
+  background: #20202a;
   z-index: 1050;
+  display: flex;
 }
 
 .home-content {
-  position: fixed;
-  top: 20px;
-  bottom: 20px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
   left: 310px;
   right: 120px;
   overflow-y: auto;
