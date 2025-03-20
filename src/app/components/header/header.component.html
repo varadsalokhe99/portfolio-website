@@ -4,16 +4,16 @@
   >
     <div class="container-fluid flex-column menubar-header">
       <!-- Navbar Toggle Button -->
-      <button
-        class="navbar-toggler"
+      <img
+        src="assets/images/navbar_icon.png"
+        class="navbar-toggler menubar-btn"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar"
         aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon menubar-btn"></span>
-      </button>
+        alt="Menu Icon"
+      />
 
       <div
         class="offcanvas offcanvas-end"
@@ -65,7 +65,7 @@
       </div>
     </div>
     <!-- Active Tab Name -->
-    <div id="active-tab" class="text-center mt-2">
+    <div id="active-tab" class="text-center">
       {{ activeTab }}
     </div>
   </nav>
