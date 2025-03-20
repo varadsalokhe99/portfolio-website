@@ -1,7 +1,7 @@
 .app-wrapper {
-  max-width: 1440px; 
-  margin: 20px auto; 
-  height: calc(100vh - 40px); 
+  max-width: 1440px;
+  margin: 20px auto;
+  height: calc(100vh - 40px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,9 +12,9 @@
 }
 
 .home-container {
-  flex: 1; 
-  margin: 0 20px; 
-  overflow-y: auto; 
+  flex: 1;
+  margin: 0 20px;
+  overflow-y: auto;
   background: #1e1e28;
   z-index: 900;
   display: flex;
@@ -73,9 +73,10 @@
   color: #8c8c8e;
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  word-break: break-word;
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
   font-size: 12px;
@@ -92,4 +93,66 @@
 .footer a {
   transition: 0.2s ease-in-out;
   color: #8c8c8e;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .app-footer {
+    position: absolute;
+    left: -290px; 
+    top: 0px;
+    bottom: 0px;
+    width: 290px;
+    z-index: 1051;
+    transition: left 0.5s ease-in-out; 
+  }
+
+  .app-footer.open {
+    left: 20px; 
+  }
+
+  .toggle-button {
+    position: absolute;
+    left: 45px;
+    top: 45px;
+    transform: translateY(-50%);
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1052;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .toggle-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .toggle-button.open {
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  .app-header {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: auto;
+    left: 20px;
+    width: auto;
+    height: 90px; 
+  }
+
+  .home-content {
+    position: absolute;
+    top: 90px; 
+    bottom: 0px;
+    left: 20px;
+    right: 20px;
+    margin-top: 0; 
+  }
 }

@@ -1,5 +1,11 @@
 <div class="app-wrapper">
-  <div class="app-footer">
+  <div class="toggle-button" (click)="toggleFooter()" [class.open]="isFooterOpen">
+    <!-- <i *ngIf="!isFooterOpen"  class="bi bi-three-dots-vertical"></i>
+    <i *ngIf="isFooterOpen" class="bi bi-x"></i> -->
+    <img src="assets/images/threedot_icon.png" *ngIf="!isFooterOpen" alt="three-dot">
+    <img src="assets/images/cross.png" *ngIf="isFooterOpen" alt="three-dot">
+  </div>
+  <div class="app-footer" [class.open]="isFooterOpen">
     <app-footer></app-footer>
   </div>
   <div class="home-content">
