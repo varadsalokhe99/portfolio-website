@@ -216,3 +216,13 @@
   transition: .2s ease-in-out;
   color: #8c8c8e;
 }
+
+@media (max-width: 768px){
+  .about-container{
+    flex-direction: column;
+  }
+
+  .about-column{
+    width: 100%;
+  }
+}
