@@ -98,7 +98,6 @@
 }
 
 .btn-primary {
-  letter-spacing: 1.5px;
   font-weight: 600;
   display: inline-flex;
   justify-content: center;
@@ -106,11 +105,10 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 0;
-  /* transition: 0.4s ease-in-out; */
-  border: none;
+  transition: 0.2s ease-in-out;
   height: 45px;
   font-size: 12px;
-  padding: 0 35px;
+  padding: 15px 35px;
   background-color: #ffc107;
   border: #ffc107 solid 1px;
   color: #23232d !important;
@@ -120,6 +118,14 @@
   background-color: #23232d;
   border-color: #ffc107;
   color: #ffc107 !important;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px){
+  .btn-primary{
+    height: auto;
+    flex-wrap: wrap;
+  }
 }
 
 .intro-img {
