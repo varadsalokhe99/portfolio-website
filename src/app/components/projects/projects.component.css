@@ -71,6 +71,10 @@
   background: none;
   border-top: none;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {
@@ -81,6 +85,12 @@
 .btn-primary {
   background-color: #ffc107;
   border-color: #ffc107;
+}
+
+@media (max-width : 768px){
+  .btn-primary{
+    margin: 0px 0px 20px 0px !important;
+  }
 }
 
 .btn-outline-dark:hover {
