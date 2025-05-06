@@ -26,7 +26,7 @@ export class ProjectsComponent {
       techStack: ['Angular', 'TypeScript', 'Bootstrap','EmailJs'],
       liveDemo: 'https://varadsaloke-portfolio.vercel.app/',
       gitRepo: 'https://github.com/varadsalokhe99/portfolio-website',  // You can add your GitHub repo link here
-      thumbnail: []
+      thumbnail: 'https://via.placeholder.com/150',
     },
     {
       title: 'Job Listing Web Application',

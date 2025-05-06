@@ -3,13 +3,13 @@
 
   <div class="projects-container">
     <div class="project-card card" *ngFor="let project of projects">
-      <div id="carousel-{{ i }}" class="carousel slide" data-bs-ride="carousel">
+      <div class="project-card card" *ngFor="let project of projects; let i = index">
+
         <!-- Indicators (dots) -->
         <div class="carousel-indicators">
           <button
             *ngFor="let img of project.thumbnail; let j = index"
             type="button"
-            data-bs-target="#carousel-{{ i }}"
             [attr.data-bs-slide-to]="j"
             [class.active]="j === 0"
             [attr.aria-current]="j === 0 ? 'true' : null"
