@@ -3,8 +3,10 @@
 
   <div class="projects-container">
     <div class="project-card card" *ngFor="let project of projects">
-      <div class="project-card card" *ngFor="let project of projects; let i = index">
-
+      <div
+        class="project-card card"
+        *ngFor="let project of projects; let i = index"
+      >
         <!-- Indicators (dots) -->
         <div class="carousel-indicators">
           <button
@@ -14,10 +16,10 @@
             [class.active]="j === 0"
             [attr.aria-current]="j === 0 ? 'true' : null"
             class="bg-secondary"
-            style="width: 10px; height: 10px; border-radius: 50%;"
+            style="width: 10px; height: 10px; border-radius: 50%"
           ></button>
         </div>
-      
+
         <!-- Slides -->
         <div class="carousel-inner rounded shadow-sm">
           <div
@@ -28,13 +30,13 @@
             <img
               [src]="img"
               class="d-block w-100"
-              style="height: 250px; object-fit: cover;"
+              style="height: 250px; object-fit: cover"
               alt="Project Image"
             />
           </div>
         </div>
       </div>
-      
+
       <div class="card-body">
         <h5 class="card-title">{{ project.title }}</h5>
         <h6 class="card-subtitle mb-2">{{ project.subtitle }}</h6>
@@ -46,15 +48,16 @@
       </div>
       <div class="card-footer">
         <a
-        *ngIf="project.liveDemo; else comingSoon"
-        [href]="project.liveDemo"
-        target="_blank"
-        class="btn btn-primary"
-        >Live Demo</a>
-      
-      <ng-template #comingSoon>
-        <a class="btn btn-secondary" disabled>Coming Soon</a>
-      </ng-template>
+          *ngIf="project.liveDemo; else comingSoon"
+          [href]="project.liveDemo"
+          target="_blank"
+          class="btn btn-primary"
+          >Live Demo</a
+        >
+
+        <ng-template #comingSoon>
+          <a class="btn btn-secondary" disabled>Coming Soon</a>
+        </ng-template>
         <a
           [href]="project.gitRepo"
           target="_blank"

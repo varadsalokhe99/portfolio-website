@@ -78,14 +78,25 @@
 }
 
 .btn {
-  border-radius: 6px;
-  font-weight: 500;
+  border-radius: 0px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 20px;
 }
 
 .btn-primary {
   background-color: #ffc107;
   border-color: #ffc107;
+  color: #23232d !important;
   margin: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #23232d;
+  border-color: #ffc107;
+  color: #ffc107 !important;
 }
 
 .btn-secondary{
