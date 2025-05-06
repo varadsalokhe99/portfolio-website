@@ -2,10 +2,10 @@
   max-width: 1100px;
 }
 
-.heading{
-    padding-left: 30px;
-    text-align: left;
-    color: #fff;
+.heading {
+  padding-left: 30px;
+  text-align: left;
+  color: #fff;
 }
 
 .projects-container {
@@ -17,7 +17,7 @@
 }
 
 .project-card {
-  flex: 1 1 calc(50% - 20px); 
+  flex: 1 1 calc(50% - 20px);
   max-width: 400px;
   border-radius: 12px;
   overflow: hidden;
@@ -85,11 +85,16 @@
 .btn-primary {
   background-color: #ffc107;
   border-color: #ffc107;
+  margin: 20px;
 }
 
-@media (max-width : 768px){
-  .btn-primary{
-    margin: 0px 0px 20px 0px !important;
+.btn-secondary{
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .btn-primary {
+    margin: 0px 20px 0px 0px !important;
   }
 }
 

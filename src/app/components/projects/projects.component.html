@@ -3,11 +3,38 @@
 
   <div class="projects-container">
     <div class="project-card card" *ngFor="let project of projects">
-      <img
-        [src]="project.thumbnail"
-        class="card-img-top"
-        alt="{{ project.title }}"
-      />
+      <div id="carousel-{{ i }}" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators (dots) -->
+        <div class="carousel-indicators">
+          <button
+            *ngFor="let img of project.thumbnail; let j = index"
+            type="button"
+            data-bs-target="#carousel-{{ i }}"
+            [attr.data-bs-slide-to]="j"
+            [class.active]="j === 0"
+            [attr.aria-current]="j === 0 ? 'true' : null"
+            class="bg-secondary"
+            style="width: 10px; height: 10px; border-radius: 50%;"
+          ></button>
+        </div>
+      
+        <!-- Slides -->
+        <div class="carousel-inner rounded shadow-sm">
+          <div
+            *ngFor="let img of project.thumbnail; let j = index"
+            class="carousel-item"
+            [class.active]="j === 0"
+          >
+            <img
+              [src]="img"
+              class="d-block w-100"
+              style="height: 250px; object-fit: cover;"
+              alt="Project Image"
+            />
+          </div>
+        </div>
+      </div>
+      
       <div class="card-body">
         <h5 class="card-title">{{ project.title }}</h5>
         <h6 class="card-subtitle mb-2">{{ project.subtitle }}</h6>
@@ -19,11 +46,15 @@
       </div>
       <div class="card-footer">
         <a
-          [href]="project.liveDemo"
-          target="_blank"
-          class="btn btn-primary me-2"
-          >Live Demo</a
-        >
+        *ngIf="project.liveDemo; else comingSoon"
+        [href]="project.liveDemo"
+        target="_blank"
+        class="btn btn-primary"
+        >Live Demo</a>
+      
+      <ng-template #comingSoon>
+        <a class="btn btn-secondary" disabled>Coming Soon</a>
+      </ng-template>
         <a
           [href]="project.gitRepo"
           target="_blank"

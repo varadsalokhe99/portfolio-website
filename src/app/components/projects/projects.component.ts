@@ -19,26 +19,25 @@ export class ProjectsComponent {
       thumbnail: 'https://via.placeholder.com/150',
     },
     {
-      title: 'Custom Business Website for Four Principals Solutions',
-      subtitle:
-        'A fully customized business website built with Angular & PrimeNG',
+      title: 'My Personal Portfolio Website',
+      subtitle: 'Showcasing my skills, projects, and freelancing journey',
       description:
-        'Developed and deployed a fully customized business website for Four Principals Solutions, designed to enhance its online presence. The project was built using Angular, TypeScript, and PrimeNG, ensuring a responsive and user-friendly experience. Integrated EmailJS for seamless contact form functionality.',
-      techStack: ['Angular', 'TypeScript', 'PrimeNG', 'EmailJS'],
-      liveDemo: '',
-      gitRepo: '',
-      thumbnail: 'https://via.placeholder.com/150',
+        'This portfolio website highlights my web development skills and showcases my technical projects and services. Built using Angular, TypeScript, and Bootstrap, the site features a clean, responsive layout and intuitive navigation. It’s designed to attract potential clients and employers while reflecting my personal brand.',
+      techStack: ['Angular', 'TypeScript', 'Bootstrap','EmailJs'],
+      liveDemo: 'https://varadsaloke-portfolio.vercel.app/',
+      gitRepo: 'https://github.com/varadsalokhe99/portfolio-website',  // You can add your GitHub repo link here
+      thumbnail: []
     },
     {
-      title: 'Custom Business Website for Four Principals Solutions',
-      subtitle:
-        'A fully customized business website built with Angular & PrimeNG',
+      title: 'Job Listing Web Application',
+      subtitle: 'A full-stack job portal with role-based access for Employers and Job Seekers',
       description:
-        'Developed and deployed a fully customized business website for Four Principals Solutions, designed to enhance its online presence. The project was built using Angular, TypeScript, and PrimeNG, ensuring a responsive and user-friendly experience. Integrated EmailJS for seamless contact form functionality.',
-      techStack: ['Angular', 'TypeScript', 'PrimeNG', 'EmailJS'],
-      liveDemo: '',
-      gitRepo: '',
+        'Developed a secure and feature-rich Job Listing Web App that allows Employers to post jobs and Job Seekers to apply. Built with React.js, Spring Boot, and MySQL, the app includes JWT-based authentication, dynamic job filtering, and user-specific dashboards. Designed to streamline the job application process with a clean and responsive interface.',
+      techStack: ['React.js', 'Spring Boot', 'MySQL', 'JWT'],
+      liveDemo: '', 
+      gitRepo: 'https://github.com/varadsalokhe99/job-listing-webapp',  
       thumbnail: 'https://via.placeholder.com/150',
-    },
+    }
+    ,
   ];
 }
