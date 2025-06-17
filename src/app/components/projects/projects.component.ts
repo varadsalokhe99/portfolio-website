@@ -16,7 +16,7 @@ export class ProjectsComponent {
       techStack: ['Angular,', 'TypeScript,', 'PrimeNG,', 'EmailJS'],
       liveDemo: '',
       gitRepo: '',
-      thumbnail: 'https://via.placeholder.com/150',
+      thumbnail: ['assets/images/Home page.PNG'],
     },
     {
       title: 'My Personal Portfolio Website',
@@ -26,7 +26,7 @@ export class ProjectsComponent {
       techStack: ['Angular,', 'TypeScript,', 'Bootstrap,','EmailJs'],
       liveDemo: 'https://varadsaloke-portfolio.vercel.app/',
       gitRepo: 'https://github.com/varadsalokhe99/portfolio-website', 
-      thumbnail: 'https://via.placeholder.com/150',
+      thumbnail: ['assets/images/portfoilio.PNG'],
     },
     {
       title: 'Job Listing Web Application',
@@ -36,7 +36,7 @@ export class ProjectsComponent {
       techStack: ['React.js,', 'Spring Boot,', 'MySQL,', 'JWT'],
       liveDemo: '', 
       gitRepo: 'https://github.com/varadsalokhe99/job-listing-webapp',  
-      thumbnail: 'https://via.placeholder.com/150',
+      thumbnail: ['https://thavamedu.org/not-image-available.png'],
     },
   ];
 }

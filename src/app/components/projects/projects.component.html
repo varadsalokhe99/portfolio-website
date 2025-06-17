@@ -2,38 +2,33 @@
   <h2 class="heading mb-4">My Projects</h2>
 
   <div class="projects-container">
-    <div class="project-card card" *ngFor="let project of projects">
-      <div
-        class="project-card card"
-        *ngFor="let project of projects; let i = index"
-      >
-        <!-- Indicators (dots) -->
-        <div class="carousel-indicators">
-          <button
-            *ngFor="let img of project.thumbnail; let j = index"
-            type="button"
-            [attr.data-bs-slide-to]="j"
-            [class.active]="j === 0"
-            [attr.aria-current]="j === 0 ? 'true' : null"
-            class="bg-secondary"
-            style="width: 10px; height: 10px; border-radius: 50%"
-          ></button>
-        </div>
+    <div class="project-card card" *ngFor="let project of projects; let i = index">
+      <!-- Indicators (dots) -->
+      <div class="carousel-indicators">
+        <!-- <button
+          *ngFor="let img of project.thumbnail; let j = index"
+          type="button"
+          [attr.data-bs-slide-to]="j"
+          [class.active]="j === 0"
+          [attr.aria-current]="j === 0 ? 'true' : null"
+          class="bg-secondary"
+          style="width: 10px; height: 10px; border-radius: 50%"
+        ></button> -->
+      </div>
 
-        <!-- Slides -->
-        <div class="carousel-inner rounded shadow-sm">
-          <div
-            *ngFor="let img of project.thumbnail; let j = index"
-            class="carousel-item"
-            [class.active]="j === 0"
-          >
-            <img
-              [src]="img"
-              class="d-block w-100"
-              style="height: 250px; object-fit: cover"
-              alt="Project Image"
-            />
-          </div>
+      <!-- Slides -->
+      <div class="carousel-inner rounded shadow-sm">
+        <div
+          *ngFor="let img of project.thumbnail; let j = index"
+          class="carousel-item"
+          [class.active]="j === 0"
+        >
+          <img
+            [src]="img"
+            class="d-block w-100"
+            style="height: 250px; object-fit: contain"
+            alt="Project Image"
+          />
         </div>
       </div>
 
