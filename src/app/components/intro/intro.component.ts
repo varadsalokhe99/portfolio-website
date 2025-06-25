@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
   textArray: string[] = [
-    'web applications.',
+    'web apps.',
     'mobile apps.',
-    'desktop applications.',
+    'desktop apps.',
     'customized business websites.',
+    'customized portfolio websites.',
   ];
   currentText: string = '';
   textIndex: number = 0;
