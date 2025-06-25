@@ -23,19 +23,20 @@ export class ProjectsComponent {
       subtitle: 'Showcasing my skills, projects, and freelancing journey',
       description:
         'This portfolio website highlights my web development skills and showcases my technical projects and services. Built using Angular, TypeScript, and Bootstrap, the site features a clean, responsive layout and intuitive navigation. It’s designed to attract potential clients and employers while reflecting my personal brand.',
-      techStack: ['Angular,', 'TypeScript,', 'Bootstrap,','EmailJs'],
-      liveDemo: 'https://varadsaloke-portfolio.vercel.app/',
-      gitRepo: 'https://github.com/varadsalokhe99/portfolio-website', 
+      techStack: ['Angular,', 'TypeScript,', 'Bootstrap,', 'EmailJs'],
+      liveDemo: 'https://varads-portfolio.vercel.app',
+      gitRepo: 'https://github.com/varadsalokhe99/portfolio-website',
       thumbnail: ['assets/images/portfoilio.PNG'],
     },
     {
       title: 'Job Listing Web Application',
-      subtitle: 'A full-stack job portal with role-based access for Employers and Job Seekers',
+      subtitle:
+        'A full-stack job portal with role-based access for Employers and Job Seekers',
       description:
         'Developed a secure and feature-rich Job Listing Web App that allows Employers to post jobs and Job Seekers to apply. Built with React.js, Spring Boot, and MySQL, the app includes JWT-based authentication, dynamic job filtering, and user-specific dashboards. Designed to streamline the job application process with a clean and responsive interface.',
       techStack: ['React.js,', 'Spring Boot,', 'MySQL,', 'JWT'],
-      liveDemo: '', 
-      gitRepo: 'https://github.com/varadsalokhe99/job-listing-webapp',  
+      liveDemo: '',
+      gitRepo: 'https://github.com/varadsalokhe99/job-listing-webapp',
       thumbnail: ['https://thavamedu.org/not-image-available.png'],
     },
   ];
